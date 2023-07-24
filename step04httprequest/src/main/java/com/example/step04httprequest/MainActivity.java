@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         requestBtn.setOnClickListener(view -> {
             //1.입력한 url 주소를 읽어와서(버튼을 누를 때마다 Main thread가 여기를 실행한다)
             String url = inputUrl.getText().toString();
-            //http요청을 하고
+            //2. http요청을 하고
             new RequestTask().execute("https://acornacademy.co.kr/index.jsp");//이 메소드는 호출 즉시 리턴된다.
             //정상적으로 응답이되면 응답된 문자열을 EditText 출력하기
         });
